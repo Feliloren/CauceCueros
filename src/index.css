@@ -1,0 +1,24 @@
+/* 1. Preparamos la base */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%; /* Permite que el cuerpo crezca si hay mucho contenido */
+}
+
+body {
+  /* 2. El fondo se queda anclado atrás de todo */
+  background-image: url('/pantalla5.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* <--- ESTO es la clave */
+  
+  /* 3. Aseguramos que el fondo cubra siempre, aunque bajes */
+  background-color: #000; /* Un color de respaldo por si la imagen tarda en cargar */
+}
+
+#root {
+  max-width: 1920px;  /* <--- ESTO te está limitando */
+  margin: 0 auto;
+  text-align: center;
+}
